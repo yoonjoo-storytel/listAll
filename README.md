@@ -4,10 +4,10 @@ ListAll is for listing up all Github repositories and Kubernetes workloads.
 
 # Usage
 
-1. Get a private access token in Github
+## Step 1. Get a private access token in Github
 Visit Setting > Developer settings > Personal access tokens, and generate a new token. 
 
-2. Get the url for the organization to list all repositories (in case it has more than one page)
+## Step 2. Get the url for the organization to list all repositories (in case it has more than one page)
 Write the following curl command in your terminal: 
 ```
 curl -H "Authorization: token mytoken" 'https://api.github.com/orgs/ORG/repos' -s -I | grep link
@@ -16,17 +16,18 @@ Here, `mytoken` is the one you created at step 1, and `ORG` is the organization'
 ```
 https://api.github.com/organizations/NUMBER/repos
 ```
-Take this part and use it at `step 4`. If this part does not show you anything, use `https://api.github.com/orgs/{org}/repos` at `step 4`.
+Take this part and use it at `step 4`. If this part does not show you anything, use `https://api.github.com/orgs/ORG/repos` at `step 4`.
 
-3. Setting gcloud and kubectl
+## Step 3. Setting gcloud and kubectl
 Download and install GCP SDK, and install kubectl.
 ```
 gcloud init
 gcloud components install kubectl
 gcloud container clusters get-credentials CLUSTER_NAME --zone=<ZONE>
 ```
+You can find `CLUSTER_NAME` and `ZONE`in the page of Kubernetes clusters.
 
-4. List github repos and kubernetes workloads
+## Step 4. List github repos and kubernetes workloads
 Clone this repository and install the dependencies:
 ```
 git clone git://github.com/yoonjoo-storytel/listAll.git
