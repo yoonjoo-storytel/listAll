@@ -13,6 +13,7 @@
     "fetch": "^1.1.0",
     "kubernetes-client": "^9.0.0",
     "node-fetch": "^2.6.1",
+    "node-stringbuilder": "^2.2.6",
     "parse-link-header": "^1.0.1"
   }
 }
