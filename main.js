@@ -6,11 +6,11 @@ var url = process.argv[3];
 
 async function main(){
     var repos = await listRepos(mytoken,url);
-    console.log("===========Github Repos==========");
+    console.log(`===========${repos.length} repositories==========`);
     repos.map(item => console.log(item));
     
     var deployments = await listDeployments();
-    console.log("===========Deployments==========");
+    console.log(`===========${deployments.length} Deployments==========`);
     deployments.map(item => console.log(item));
 }
 
