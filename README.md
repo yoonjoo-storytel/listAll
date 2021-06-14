@@ -5,7 +5,7 @@ ListAll is for listing up all Github repositories and Kubernetes workloads.
 # Usage
 
 ## Step 1. Get a private access token in Github
-Visit Setting > Developer settings > Personal access tokens, and generate a new token. 
+Visit Setting > Developer settings > Personal access tokens in Github, and click `generate a new token`. 
 
 ## Step 2. Get the url for the organization to list all repositories (in case it has more than one page)
 Write the following curl command in your terminal: 
@@ -30,7 +30,7 @@ You can find `CLUSTER_NAME` and `ZONE`in the page of Kubernetes clusters.
 ## Step 4. List github repos and kubernetes workloads
 Clone this repository and install the dependencies:
 ```
-git clone git://github.com/yoonjoo-storytel/listAll.git
+git clone https://github.com/yoonjoo-storytel/listAll.git
 npm install
 ```
 Run using your private access token from `step 1` and the organization's url from `step 2`.
