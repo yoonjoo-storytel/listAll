@@ -23,7 +23,7 @@ async function listRepos(mytoken, repos) {
                 data.map(repo => list.push(repo.name))
             })
     } while (nextPageLink);
-    list.sort();
+  //  list.sort();
     return list;
 }
 

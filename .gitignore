@@ -1,4 +1,6 @@
 node_modules/
 result.txt
 result1.txt
+result2.txt
+result3.txt
 .prettierrc
