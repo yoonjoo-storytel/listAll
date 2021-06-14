@@ -16,7 +16,7 @@ Here, `mytoken` is the one you created at step 1, and `ORG` is the organization'
 ```
 https://api.github.com/organizations/NUMBER/repos
 ```
-Take this part and use it at step 4. If this part does not show you anything, use `https://api.github.com/orgs/{org}/repos` at step 4.
+Take this part and use it at `step 4`. If this part does not show you anything, use `https://api.github.com/orgs/{org}/repos` at `step 4`.
 
 3. Setting gcloud and kubectl
 Download and install GCP SDK, and install kubectl.
