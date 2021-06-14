@@ -12,6 +12,10 @@ async function main(){
     var deployments = await listDeployments();
     console.log(`===========${deployments.length} Deployments==========`);
     deployments.map(item => console.log(item));
+
+    var matched = deployments.filter(element => repos.includes(element))
+    console.log(`==========${matched.length} Matched========`);
+    matched.map(item => console.log(item));
 }
 
 main()
