@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@kubernetes/client-node": "^0.14.3",
+    "fastest-levenshtein": "^1.0.12",
     "fetch": "^1.1.0",
     "kubernetes-client": "^9.0.0",
     "node-fetch": "^2.6.1",

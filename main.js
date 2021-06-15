@@ -1,6 +1,7 @@
 var listDeployments = require('./listDeployments.js');
 var listRepos = require('./listRepos.js');
 var writeList = require('./writeList.js');
+var findSimilarRepos = require('./findSimilarRepos.js');
 
 var mytoken = process.argv[2];
 var url = process.argv[3];
@@ -30,6 +31,12 @@ async function main(){
         onlyInDeploy, 
         `========${onlyInDeploy.length} deployments are not matched========`, 
         'onlyInDeploy.txt');
+
+    console.log(`Found ${repos.length} repositories, ${deployments.length} deployments`)
+    writeList(
+        findSimilarRepos(onlyInRepos, onlyInDeploy),
+        `========deployments : similar repository========`, 
+        'similarRepos.txt');
 }
 
 main()
