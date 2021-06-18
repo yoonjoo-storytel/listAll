@@ -3,8 +3,7 @@ const sql = google.sql('v1beta4');
 
 async function listSQL() {
   const auth = new google.auth.GoogleAuth({
-    // Scopes can be specified either as an array or as a single, space-delimited string.
-    scopes: ['https://www.googleapis.com/auth/compute'],
+    scopes: ['https://www.googleapis.com/auth/sql'],
   });
   const authClient = await auth.getClient();
 
