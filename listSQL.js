@@ -12,7 +12,7 @@ async function listSQL() {
 
   // Fetch the list
   const res = await sql.instances.list({ project, auth: authClient });
-  console.log(res.data);
+  return res.data.items.map((item) => item.name);
 }
 
 module.exports = listSQL;

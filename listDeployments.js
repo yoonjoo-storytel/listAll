@@ -37,7 +37,6 @@ async function listDeployments() {
         });
       }
     });
-    console.log('antal deploy: ' + deployments.length);
   });
 
   return deployments;

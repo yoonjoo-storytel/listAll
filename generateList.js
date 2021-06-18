@@ -1,7 +1,7 @@
-function generateCorrelation(repos, deployments) {
+function generateList(repos, deployments, sql) {
   var list = [];
   var list2 = deployments.filter((item) => repos.includes(item.deployment));
-  console.log('antal matched: ' + list2.length);
+  console.log('#matched: ' + list2.length);
 
   deployments.map((element) => {
     if (repos.includes(element.deployment)) {
@@ -20,9 +20,7 @@ function generateCorrelation(repos, deployments) {
       });
     }
   });
-  //   !deployments.find(function (dep) {
-  //  return dep.deployment == item.metadata.labels.app;
-  //})
+
   repos
     .filter(
       (element) =>
@@ -39,7 +37,22 @@ function generateCorrelation(repos, deployments) {
       }),
     );
 
+  var onlySQL = sql.filter(
+    (element) =>
+      !list.find(function (item) {
+        return item.sql == element;
+      }),
+  );
+  onlySQL.map((element) =>
+    list.push({
+      repo: '?',
+      deployment: '?',
+      sql: element,
+      owner: '?',
+    }),
+  );
+  console.log('#onlySQL: ' + onlySQL.length);
   return list;
 }
 
-module.exports = generateCorrelation;
+module.exports = generateList;
