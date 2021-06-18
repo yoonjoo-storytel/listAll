@@ -13,6 +13,7 @@
     "csv-writer": "^1.6.0",
     "fastest-levenshtein": "^1.0.12",
     "fetch": "^1.1.0",
+    "googleapis": "^76.0.0",
     "kubernetes-client": "^9.0.0",
     "node-fetch": "^2.6.1",
     "node-stringbuilder": "^2.2.6",
