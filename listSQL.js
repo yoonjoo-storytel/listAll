@@ -1,8 +1,6 @@
 const { google } = require('googleapis');
 const sql = google.sql('v1beta4');
 
-// Each API may support multiple version. With this sample, we're getting
-// v3 of the blogger API, and using an API key to authenticate.
 async function listSQL() {
   const auth = new google.auth.GoogleAuth({
     // Scopes can be specified either as an array or as a single, space-delimited string.
