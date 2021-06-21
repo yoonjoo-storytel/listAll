@@ -1,6 +1,6 @@
 # listAll
 
-ListAll is for listing up all Github repositories and Kubernetes workloads.
+ListAll is for listing up all Github repositories, Kubernetes workloads and SQL databases.
 
 # Usage
 
@@ -37,9 +37,3 @@ Run using your private access token from `step 1` and the organization's url fro
 ```
 node main.js TOKEN URL
 ```
-
-You will find the result in four different txt-files:
-- matched.txt : list of the matched repositories/deployments.
-- onlyInRepos.txt : list of the repositories without an exact match.
-- onlyInDeployments.txt : list of the deployments without an exact match.
-- similarRepos.txt : the list of deployments with similar repository.
